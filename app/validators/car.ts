@@ -1,0 +1,61 @@
+import vine from '@vinejs/vine'
+
+export const carCreateValidator = vine.compile(
+  vine.object({
+    brand: vine.string().minLength(3).maxLength(64),
+    model: vine.string().minLength(3).maxLength(64),
+    year: vine.number().min(1900).max(new Date().getFullYear()),
+    licensePlate: vine.string().minLength(3).maxLength(16),
+    status: vine.string().minLength(3).maxLength(32),
+    pricePerDay: vine.number().min(0),
+    kw: vine.number().min(0),
+    ch: vine.number().min(0),
+    typeShape: vine.string().minLength(3).maxLength(32),
+    consommationType: vine.string().minLength(3).maxLength(32),
+    consommation: vine.number().min(0),
+    autonomie: vine.number().min(0),
+    emissionCo2: vine.number().min(0),
+    fuelLevel: vine.number().min(0),
+    mileage: vine.number().min(0),
+    lastMaintenanceDate: vine.date().optional(),
+    numberSeats: vine.number().min(1),
+    gearboxType: vine.string().minLength(3).maxLength(32),
+    carColor: vine.string().minLength(3).maxLength(32),
+    insuranceExpirationDate: vine.date().optional(),
+    gpsEquiped: vine.boolean(),
+    additionalFeatures: vine.string().optional(),
+    category: vine.string().minLength(3).maxLength(32),
+    rentalCount: vine.number().min(0),
+    statusDetails: vine.string().optional(),
+  })
+)
+
+export const carUpdateValidator = vine.compile(
+  vine.object({
+    brand: vine.string().minLength(3).maxLength(64).optional(),
+    model: vine.string().minLength(3).maxLength(64).optional(),
+    year: vine.number().min(1900).max(new Date().getFullYear()).optional(),
+    licensePlate: vine.string().minLength(3).maxLength(16).optional(),
+    status: vine.string().minLength(3).maxLength(32).optional(),
+    pricePerDay: vine.number().min(0).optional(),
+    kw: vine.number().min(0).optional(),
+    ch: vine.number().min(0).optional(),
+    typeShape: vine.string().minLength(3).maxLength(32).optional(),
+    consommationType: vine.string().minLength(3).maxLength(32).optional(),
+    consommation: vine.number().min(0).optional(),
+    autonomie: vine.number().min(0).optional(),
+    emissionCo2: vine.number().min(0).optional(),
+    fuelLevel: vine.number().min(0).optional(),
+    mileage: vine.number().min(0).optional(),
+    lastMaintenanceDate: vine.date().optional(),
+    numberSeats: vine.number().min(1).optional(),
+    gearboxType: vine.string().minLength(3).maxLength(32).optional(),
+    carColor: vine.string().minLength(3).maxLength(32).optional(),
+    insuranceExpirationDate: vine.date().optional(),
+    gpsEquiped: vine.boolean().optional(),
+    additionalFeatures: vine.string().optional(),
+    category: vine.string().minLength(3).maxLength(32).optional(),
+    rentalCount: vine.number().min(0).optional(),
+    statusDetails: vine.string().optional(),
+  })
+)

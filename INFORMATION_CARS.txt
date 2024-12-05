@@ -1,0 +1,12 @@
+// TYPE DE VOITURE //
+
+Véhicules catégorie A : mini-citadines
+Véhicules catégorie B : petites voitures
+Véhicules catégorie C : voitures compactes
+Véhicules catégorie D : grosses voitures
+Véhicules catégorie E : voitures de prestige
+Véhicules catégorie F : voitures de luxe
+Véhicules catégorie J : SUV
+Véhicules catégorie M : grandes voitures familiales
+Véhicules catégorie S : voitures de sport
+
