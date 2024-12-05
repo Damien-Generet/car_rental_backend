@@ -60,3 +60,26 @@ router
     router.delete('/:id', [CarsController, 'destroy']).use(middleware.auth())
   })
   .prefix('cars') // Toutes les routes commencent par /cars
+
+
+// RESERVATIONS ROUTES
+
+const ReservationsController = () => import('#controllers/reservations_controller')
+
+router.group(() => {
+  // Lister toutes les réservations
+  router.get('/', [ReservationsController, 'index']).use(middleware.auth())
+
+  // Créer une réservation
+  router.post('/', [ReservationsController, 'store']).use(middleware.auth())
+
+  // Obtenir une réservation spécifique
+  router.get('/:id', [ReservationsController, 'show']).use(middleware.auth())
+
+  // Mettre à jour une réservation
+  router.put('/:id', [ReservationsController, 'update']).use(middleware.auth())
+
+  // Supprimer une réservation
+  router.delete('/:id', [ReservationsController, 'destroy']).use(middleware.auth())
+}
+).prefix('reservations')
