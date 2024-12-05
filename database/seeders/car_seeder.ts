@@ -1,4 +1,4 @@
-import BaseSeeder from '@ioc:Adonis/Lucid/Seeder'
+import { BaseSeeder } from '@adonisjs/lucid/seeders'
 import Car from '#models/car'
 import { faker } from '@faker-js/faker'
 import { DateTime } from 'luxon'

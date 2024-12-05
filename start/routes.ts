@@ -83,3 +83,5 @@ router.group(() => {
   router.delete('/:id', [ReservationsController, 'destroy']).use(middleware.auth())
 }
 ).prefix('reservations')
+
+

@@ -1,4 +1,4 @@
-import BaseSeeder from '@ioc:Adonis/Lucid/Seeder'
+import { BaseSeeder } from '@adonisjs/lucid/seeders'
 import Reservation from '#models/reservation'
 import Car from '#models/car'
 import User from '#models/user'
